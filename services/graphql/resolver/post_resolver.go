@@ -1,12 +1,12 @@
 package resolver
 
 import (
-	"github.com/graph-gophers/graphql-go"
-	pano_api "go.kamp.us/services/pano-api/rpc/pano-api"
+	graphql "github.com/graph-gophers/graphql-go"
+	pano "go.kamp.us/protos/pano-api"
 )
 
 type postResolver struct {
-	post *pano_api.Post
+	post *pano.Post
 }
 
 func (r *postResolver) ID() graphql.ID { return graphql.ID(r.post.Id) }
